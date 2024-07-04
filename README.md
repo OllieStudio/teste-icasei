@@ -17,6 +17,7 @@
 ### Passo 1: Clone o repositório
 
 git clone *https://github.com/OllieStudio/teste-icasei.git*
+
 cd *teste-icasei*
 
 ### Passo 2: Configure a chave da API do YouTube
