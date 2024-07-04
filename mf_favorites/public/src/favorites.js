@@ -1,10 +1,17 @@
+const baseURL = 'http://localhost:3000';
+
 document.addEventListener('DOMContentLoaded', async () => {
-    const response = await fetch('/api/favorites');
+    const response = await fetch(`${baseURL}/api/favorites`,{
+      credentials:"include"
+    });
     const favorites = await response.json();
     const favoritesList = document.getElementById('favorites-list');
     favoritesList.innerHTML = '';
   
-    favorites.forEach(video => {
+    favorites.forEach(data => {
+      const video = JSON.parse(data); 
+      video.favorite = true;
+      
       const videoDiv = document.createElement('div');
       videoDiv.innerHTML = `
         <div class="video-item">
@@ -36,6 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           button.classList.add('delFavorite');
           const video = JSON.parse(button.getAttribute('data-video'));
           await fetch(`${baseURL}/api/favorites`, {
+            credentials:"include",
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -48,6 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           button.classList.add('addFavorite');
           const video = JSON.parse(button.getAttribute('data-video'));
           await fetch(`${baseURL}/api/favorites/${video.id.videoId}`, {
+            credentials:"include",
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json'

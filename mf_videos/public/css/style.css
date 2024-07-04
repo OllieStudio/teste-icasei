@@ -112,7 +112,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
-  width: 300px; /* Adjust as needed */
+  width: 21vw;
   margin: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -192,4 +192,19 @@ body{
 
 .delFavorite i{
   display: none;
+}
+
+@media (max-width: 768px) {
+  .video-item {
+    width: 90%; /* Adjust as needed for smaller screens */
+  }
+
+  .Panel{
+    margin: 0;
+    padding: 20px;
+  }
+
+  #searchbar{
+    width:90%
+  }
 }

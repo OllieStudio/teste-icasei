@@ -6,9 +6,12 @@ const port = 3000;
 const YOUTUBE_API_KEY = 'AIzaSyAHFGsH1frNK5D17SPiE9yrgUfAHQABUUM';
 
 let favorites = [];
-
+app.use(cors());
 app.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*'); 
+   res.header('Access-Control-Allow-Credentials', true);
+   res.header('Access-Control-Allow-Headers', '*');
+   res.header('Access-Control-Allow-Methods', '*'); 
   next();
 });
 app.use(express.json());
@@ -37,6 +40,12 @@ app.get('/api/search', async (req, res) => {
 
 app.post('/api/favorites', (req, res) => {
   const { video } = req.body;
+  favorites.push(video);
+  res.status(200).send(favorites);
+});
+
+app.get('/api/addfavorite', async (req, res) => {
+  const { video } = req.query;
   favorites.push(video);
   res.status(200).send(favorites);
 });

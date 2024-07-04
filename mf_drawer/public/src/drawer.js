@@ -1,6 +1,16 @@
-window.addEventListener('DOMContentLoaded', () => {
+const baseURL = 'http://localhost:3000';
+
+window.addEventListener('DOMContentLoaded', async () => {
   const links = document.querySelectorAll('nav ul li a');
   const iframe = document.getElementById('content-frame');
+
+  const response = await fetch(`${baseURL}/api/favorites`,{
+    credentials:"include"
+  });
+
+  const favorites = await response.json();  
+  const count = document.getElementById('favoritescount');
+  count.textContent = favorites.length;
 
   const routes = {
     '/videos': 'http://localhost:9011',

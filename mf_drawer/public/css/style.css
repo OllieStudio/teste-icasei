@@ -53,6 +53,7 @@ nav ul {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    position:relative;
   }
 
   a{
@@ -69,6 +70,21 @@ a span{
   
   #content-frame{
     width:78vw;
+  }
+
+  #favoritescount{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5e7cb1;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    position:absolute;
+    right: 0px;
   }
 
   @media screen and (max-width: 768px) {
