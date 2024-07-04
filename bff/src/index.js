@@ -5,7 +5,7 @@ const http = require('http');
 const WebSocket = require('ws');
 const app = express();
 const port = 3000;
-const YOUTUBE_API_KEY = 'AIzaSyAHFGsH1frNK5D17SPiE9yrgUfAHQABUUM';
+const YOUTUBE_API_KEY = 'YOUTUBE_API_KEY';
 
 let favorites = [];
 let lastSearch = "iCasei";
