@@ -1,3 +1,4 @@
 /.idx
 **/node_modules/**
-.vscode/settings.json
+/.vscode/**
+package-lock.json
