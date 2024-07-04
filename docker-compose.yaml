@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mf_drawer:
+    build: ./mf_drawer
+    ports:
+      - "9010:8080"
+  mf_videos:
+    build: ./mf_videos
+    ports:
+      - "9011:8080"
+  mf_favorites:
+    build: ./mf_favorites
+    ports:
+      - "9012:8080"
+  bff:
+    build: ./bff
+    ports:
+      - "3000:3000"

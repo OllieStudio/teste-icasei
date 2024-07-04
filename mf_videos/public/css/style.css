@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+  font-family: Roboto;
+  padding:0;
+  margin:0;
+}
+
+.Title{
+  margin-top:0em;
+  margin-bottom: 1em;
+  color: #5e7cb1;
+}
+
+.Panel{
+  padding: 30px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: top;
+  border: 1px solid #5e7cb1;
+  border-radius:20px;
+  height: 87vh;
+}
+
+#searchbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin-bottom: 1em;
+  padding: 5px 15px;
+  background: #c6d8eb;
+  border-radius: 30px;
+}
+
+#search-term{
+  width:95%
+  
+}
+
+#search-button{
+  width:35px;
+  height: 35px;
+  border-radius: 100px;
+  background:transparent;
+  color:#FFF;
+  display:flex;
+  align-content:center;
+  align-items:center;
+  justify-content:center;
+  margin-left:5px;
+  cursor: pointer;
+}
+
+.custom_input {
+	display: flex;
+	align-items: center;
+	position: relative;
+	max-width: 100%;
+}
+
+#search-term {
+	font-size: 18px;
+	padding: 5px 10px;
+	width: 100%;
+	padding-left: 35px;
+	outline: none;
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #C4D1EB;
+	border-radius: 17px;
+	box-shadow: none;
+	transition: .3s ease;
+}
+
+#search-term:focus {
+	background: #F2F2F2;
+	border: 1px solid #5A7EC7;
+	border-radius: 10px;
+}
+
+#search-term::placeholder {
+	color: #DDDDDD;
+}
+
+.svg_icon {
+	position: absolute;
+	left: 10px;
+	fill: #4660DC;
+	width: 18px;
+	height: 18px;
+}
+
+#video-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  overflow-y: auto;
+  height: 100%;
+}
+
+  #video-list h3 {
+    margin: 0;
+  }
+  
+  /* General styles */
+.video-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  width: 300px; /* Adjust as needed */
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  position:relative;
+}
+
+.video-thumbnail {
+  position: relative;
+  height: 169px; /* Maintain aspect ratio with image width */
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.play-button svg {
+  fill: white;
+  width: 40px;
+  height: 40px;
+}
+
+.video-info {
+  padding: 10px;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.video-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-to-favorites-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f00; /* Change color as needed */
+}
+
+.favorite-button{
+  font-size: 10px;
+  color: #4B77D1;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  cursor: pointer;
+}
+
+.addFavorite svg{
+  display: none;
+}
+
+.delFavorite i{
+  display: none;
+}
