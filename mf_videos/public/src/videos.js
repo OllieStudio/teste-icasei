@@ -7,7 +7,7 @@ document.getElementById('search-button').addEventListener('click', async () => {
     const videoList = document.getElementById('video-list');
     videoList.innerHTML = '';
   
-    data.items.forEach(video => {
+    data.forEach(video => {
       const videoDiv = document.createElement('div');
       videoDiv.innerHTML = `
         <div class="video-item">

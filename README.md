@@ -28,5 +28,5 @@ const YOUTUBE_API_KEY = 'YOUTUBE_KEY';
 docker-compose up --build
 
 ### Passo 4: Acesse a aplicação
-Abra o navegador e vá para http://localhost:9000.
+Abra o navegador e vá para http://localhost:9010.
 

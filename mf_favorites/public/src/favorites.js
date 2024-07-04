@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const favoritesList = document.getElementById('favorites-list');
     favoritesList.innerHTML = '';
   
-    favorites.items.forEach(video => {
+    favorites.forEach(video => {
       const videoDiv = document.createElement('div');
       videoDiv.innerHTML = `
         <div class="video-item">
