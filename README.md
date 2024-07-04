@@ -20,7 +20,7 @@ git clone <url-do-repositorio>
 cd project-root
 
 ### Passo 2: Configure a chave da API do YouTube
-Edite o arquivo <bff/src/index.js> e substitua 'YOUTUBE_KEY' pela sua chave da API do YouTube.
+Edite o arquivo <bff/src/index.js> e substitua 'YOUTUBE_API_KEY' pela sua chave da API do YouTube.
 
 const YOUTUBE_API_KEY = 'YOUTUBE_KEY';
 
